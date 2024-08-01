@@ -38,5 +38,20 @@ namespace CalculadoraTeste
             //Assert
             Assert.True(resultado);
         }
+
+        //Executar vários cenários de uma vez
+        [Theory]
+        [InlineData(3)]
+        [InlineData(5)]
+        [InlineData(7)]
+        [InlineData(9)]
+        public void DeveVerificarSeOsNumerosSaoImparesERetornarFalse(int num)
+        {
+            //Act
+            var resultado = _calc.EhPar(num);
+
+            //Assert
+            Assert.False(resultado);
+        }
     }
 }
