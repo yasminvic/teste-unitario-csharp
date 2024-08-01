@@ -26,6 +26,17 @@ namespace CalculadoraTeste
             Assert.Equal(15, resultado);
         }
 
-         
+        [Fact]
+        public void DeveVerificarSe4EhParERetornarTrue()
+        {
+            //Arrange
+            int num = 5;
+
+            //Act
+            var resultado = _calc.EhPar(num);
+
+            //Assert
+            Assert.True(resultado);
+        }
     }
 }

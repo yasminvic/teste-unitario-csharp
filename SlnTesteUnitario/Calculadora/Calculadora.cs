@@ -21,5 +21,10 @@
         {
             return x / y;
         }
+
+        public bool EhPar(int num)
+        {
+            return num % 2 == 0;
+        }
     }
 }
