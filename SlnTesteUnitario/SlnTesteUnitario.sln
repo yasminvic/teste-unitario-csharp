@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{01A9F043-C9ED-49FE-8807-AD125BEDCB07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exemplo", "Calculadora\Exemplo.csproj", "{01A9F043-C9ED-49FE-8807-AD125BEDCB07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraTeste", "CalculadoraTeste\CalculadoraTeste.csproj", "{C69FC761-1B7B-401D-9696-7FF1E7A4EA62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExemploTeste", "CalculadoraTeste\ExemploTeste.csproj", "{C69FC761-1B7B-401D-9696-7FF1E7A4EA62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,14 +1,14 @@
-using Calculadora;
+using Exemplo;
 
 namespace CalculadoraTeste
 {
-    public class CalculaTeste
+    public class CalculadoraTeste
     {
-        private Calcula _calc;
+        private Calculadora _calc;
 
-        public CalculaTeste()
+        public CalculadoraTeste()
         {
-            _calc = new Calcula();
+            _calc = new Calculadora();
         }
 
 
@@ -25,5 +25,7 @@ namespace CalculadoraTeste
             //Assert => Validar o resultado esperado, no caso 15
             Assert.Equal(15, resultado);
         }
+
+         
     }
 }

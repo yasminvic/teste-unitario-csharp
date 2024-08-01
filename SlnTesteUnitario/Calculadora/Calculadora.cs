@@ -1,6 +1,6 @@
-﻿namespace Calculadora
+﻿namespace Exemplo
 {
-    public class Calcula
+    public class Calculadora
     {
         public int Somar(int x, int y)
         {
