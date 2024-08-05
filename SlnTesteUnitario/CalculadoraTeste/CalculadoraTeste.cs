@@ -53,5 +53,14 @@ namespace CalculadoraTeste
             //Assert
             Assert.False(resultado);
         }
+
+        [Theory]
+        [InlineData(new int[] { 2, 4 })]
+        [InlineData(new int[] { 14, 10, 26 })]
+        public void DeveVerificarSeOArrayDeNumerosSãoParesERetornarTrue(int[] numeros)
+        {
+            //Act e Assert
+            Assert.All(numeros, x => Assert.True(_calc.EhPar(x)));
+        }
     }
 }
