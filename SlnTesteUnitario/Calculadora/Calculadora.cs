@@ -1,6 +1,6 @@
-﻿namespace Calculadora
+﻿namespace Exemplo
 {
-    public class Calcula
+    public class Calculadora
     {
         public int Somar(int x, int y)
         {
@@ -20,6 +20,11 @@
         public int Dividir(int x, int y)
         {
             return x / y;
+        }
+
+        public bool EhPar(int num)
+        {
+            return num % 2 == 0;
         }
     }
 }

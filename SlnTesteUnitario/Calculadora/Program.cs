@@ -1,6 +1,6 @@
-﻿using Calculadora;
+﻿using Exemplo;
 
-Calcula c = new Calcula();
+Calculadora c = new Calculadora();
 
 Console.WriteLine(c.Somar(2, 2));
 
