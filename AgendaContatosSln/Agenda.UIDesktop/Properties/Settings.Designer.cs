@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AgendaUIDesktop.Properties
+namespace Agenda.UIDesktop.Properties
 {
 
 

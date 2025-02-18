@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D44A72E-21B8-446D-9E1B-7F1913F6708C}</ProjectGuid>
+    <ProjectGuid>{07F5DA7B-B7AA-429B-BFB4-958F14FEE46A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AgendaUIDesktop</RootNamespace>
-    <AssemblyName>AgendaUIDesktop</AssemblyName>
+    <RootNamespace>Agenda.UIDesktop</RootNamespace>
+    <AssemblyName>Agenda.UIDesktop</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
