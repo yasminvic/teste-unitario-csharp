@@ -22,8 +22,6 @@ namespace Agenda.DAO.Teste
             _contatoDao.InserirContato(id.ToString(), nome);
 
             //Assert
-            //Assert.AreEqual(nome, resultado.nome);
-            //Assert.AreEqual(nome, resultado.nome);
             Assert.True(true);
         }
 
@@ -40,7 +38,6 @@ namespace Agenda.DAO.Teste
 
             //Assert
             Assert.AreEqual(nome, resultado);
-
         }
 
         [TearDown] //executa ao final de cada teste

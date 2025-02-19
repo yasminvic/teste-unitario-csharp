@@ -5,29 +5,34 @@ namespace Agenda.DAO
 {
     public class ContatosDao
     {
+        private string _strConnection;
+        private SqlConnection _con;
+
+        public ContatosDao()
+        {
+            _strConnection = @"Data Source=localhost\sqlexpress; Initial Catalog=agenda-contatos-testes-unitarios; Integrated Security=True;";
+            _con = new SqlConnection(_strConnection);
+        }
+
         public void InserirContato(string id, string nome)
         {
-            string strConnection = @"Data Source=localhost\sqlexpress; Initial Catalog=agenda-contatos-testes-unitarios; Integrated Security=True;";
-            SqlConnection con = new SqlConnection(strConnection);
-            con.Open();
+            _con.Open();
 
             string sqlInsert = $"insert into Contato values ('{id}', '{nome}')";
 
-            SqlCommand cmd = new SqlCommand(sqlInsert, con);
+            SqlCommand cmd = new SqlCommand(sqlInsert, _con);
 
             cmd.ExecuteNonQuery();
-            con.Close();
+            _con.Close();
         }
 
         public string ObterContato(string id)
         {
-            string strConnection = @"Data Source=localhost\sqlexpress; Initial Catalog=agenda-contatos-testes-unitarios; Integrated Security=True;";
-            SqlConnection con = new SqlConnection(strConnection);
-            con.Open();
+            _con.Open();
 
             string sqlSelect = $"select Nome from Contato where Id = '{id}'";
 
-            SqlCommand cmd = new SqlCommand(sqlSelect, con);
+            SqlCommand cmd = new SqlCommand(sqlSelect, _con);
 
             return cmd.ExecuteScalar().ToString();
         }
