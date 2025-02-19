@@ -14,11 +14,11 @@ namespace Agenda.DAO
             _con = new SqlConnection(_strConnection);
         }
 
-        public void InserirContato(string id, string nome)
+        public void InserirContato(Contato contato)
         {
             _con.Open();
 
-            string sqlInsert = $"insert into Contato values ('{id}', '{nome}')";
+            string sqlInsert = $"insert into Contato values ('{contato.Id}', '{contato.Nome}')";
 
             SqlCommand cmd = new SqlCommand(sqlInsert, _con);
 
@@ -26,15 +26,46 @@ namespace Agenda.DAO
             _con.Close();
         }
 
-        public string ObterContato(string id)
+        public Contato ObterContato(string id)
         {
             _con.Open();
 
-            string sqlSelect = $"select Nome from Contato where Id = '{id}'";
+            string sqlSelect = $"select Id, Nome from Contato where Id = '{id}'";
 
             SqlCommand cmd = new SqlCommand(sqlSelect, _con);
 
-            return cmd.ExecuteScalar().ToString();
+            var sqlReader = cmd.ExecuteReader();
+            sqlReader.Read();
+
+            return new Contato()
+            {
+                Id = Guid.Parse(sqlReader["Id"].ToString()),    
+                Nome = sqlReader["Nome"].ToString()
+            };
+        }
+
+        public List<Contato> ObterTodosTeste()
+        {
+            var contatos = new List<Contato>();
+
+            _con.Open();
+
+            string sqlSelect = $"select Id, Nome from Contato";
+
+            SqlCommand cmd = new SqlCommand(sqlSelect, _con);
+
+            var sqlReader = cmd.ExecuteReader();
+            while (sqlReader.Read()) 
+            {
+                var contato = new Contato()
+                {
+                    Id = Guid.Parse(sqlReader["Id"].ToString()),
+                    Nome = sqlReader["Nome"].ToString()
+                };
+                contatos.Add(contato);
+            }
+
+            return contatos;
         }
 
     }
