@@ -1,5 +1,4 @@
 using Agenda.Domain;
-using System.Data.Common;
 
 namespace Agenda.DAO.Teste
 {
