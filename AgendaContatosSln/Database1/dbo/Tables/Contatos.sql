@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Contatos] (
+    [Id]   UNIQUEIDENTIFIER NOT NULL,
+    [Nome] VARCHAR (100)    NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

@@ -10,7 +10,7 @@ namespace Agenda.DAO
         public ContatosDao()
         {
             var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory()) // Certifique-se de que o namespace System.IO está incluído  
+            .SetBasePath(Directory.GetCurrentDirectory()) 
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             IConfiguration configuration = builder.Build();
