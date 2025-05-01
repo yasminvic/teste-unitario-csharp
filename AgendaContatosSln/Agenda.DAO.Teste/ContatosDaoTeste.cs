@@ -1,4 +1,5 @@
 using Agenda.Domain;
+using System.Configuration;
 
 namespace Agenda.DAO.Teste
 {
@@ -8,6 +9,7 @@ namespace Agenda.DAO.Teste
         [SetUp]
         public void Setup()
         {
+            var testeing = ConfigurationManager.ConnectionStrings["con"]?.ConnectionString;
             _contatoDao = new ContatosDao();
         }
 
@@ -84,3 +86,4 @@ namespace Agenda.DAO.Teste
         }
     }
 }
+
