@@ -1,15 +1,14 @@
 using Agenda.Domain;
-using System.Configuration;
 
 namespace Agenda.DAO.Teste
 {
-    public class ContatosDaoTeste
+    [TestFixture]
+    public class ContatosDaoTeste : BaseTeste
     {
         private ContatosDao _contatoDao;
         [SetUp]
         public void Setup()
         {
-            var testeing = ConfigurationManager.ConnectionStrings["con"]?.ConnectionString;
             _contatoDao = new ContatosDao();
         }
 
@@ -67,7 +66,7 @@ namespace Agenda.DAO.Teste
         }
 
         [TearDown] //executa ao final de cada teste
-        public void Test1()
+        public void Limpar()
         {
             _contatoDao = null;
         }

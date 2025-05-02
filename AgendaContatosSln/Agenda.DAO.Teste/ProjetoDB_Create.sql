@@ -13,8 +13,8 @@ SET NUMERIC_ROUNDABORT OFF;
 
 
 GO
-:setvar DatabaseName "Database1"
-:setvar DefaultFilePrefix "Database1"
+:setvar DatabaseName ""
+:setvar DefaultFilePrefix ""
 :setvar DefaultDataPath ""
 :setvar DefaultLogPath ""
 
