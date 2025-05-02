@@ -1,4 +1,5 @@
 using Agenda.Domain;
+using AutoFixture;
 
 namespace Agenda.DAO.Teste
 {
@@ -6,22 +7,20 @@ namespace Agenda.DAO.Teste
     public class ContatosDaoTeste : BaseTeste
     {
         private ContatosDao _contatoDao;
+        private Fixture _fixture;
         [SetUp]
         public void Setup()
         {
             _contatoDao = new ContatosDao();
+            _fixture = new Fixture();
         }
 
         [Test]
         public void InserirContatoTeste()
         {
             //Arrange
-            var contato = new Contato()
-            {
-                Id = Guid.NewGuid(),
-                Nome = "Pedro"
-            };
-            
+            var contato = CriarContato();
+
             //Act
             _contatoDao.InserirContato(contato);
 
@@ -33,11 +32,7 @@ namespace Agenda.DAO.Teste
         public void ObterContatoTeste()
         {
             //Arrange
-            var contato = new Contato()
-            {
-                Id = Guid.NewGuid(),
-                Nome = "Pedro"
-            };
+            var contato = CriarContato();
             _contatoDao.InserirContato(contato);
 
             //Act
@@ -75,13 +70,14 @@ namespace Agenda.DAO.Teste
         {
             for (int i = 0; i < quantidade; i++)
             {
-                var contato = new Contato()
-                {
-                    Id = Guid.NewGuid(),
-                    Nome = "Pedro"
-                };
+                var contato = CriarContato();
                 lista.Add(contato);
             }
+        }
+
+        private Contato CriarContato()
+        {
+            return _fixture.Create<Contato>();
         }
     }
 }
